@@ -1,0 +1,115 @@
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	line-height: 1.45;
+	color: #222;
+	background: #f3f5f7;
+	padding: 24px;
+}
+
+.Header {
+	background: linear-gradient(90deg, #0f1724 0%, #1e293b 100%);
+	color: #fff;
+	padding: 20px 24px;
+	border-radius: 8px;
+	margin-bottom: 18px;
+}
+.Header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.Header a {
+    color: #fff;
+    text-decoration: none;
+}
+.Header span {
+    color: #999999;
+    font-size: 15px;
+}   
+.name{
+    color: #fff;
+}
+.Name_Loc_Email_Number .name { font-size: 22px; margin-bottom: 6px; }
+.Name_Loc_Email_Number div { font-size: 13px; opacity: 0.9; }
+
+.flex {
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+.main {
+	flex: 3 1 0%;
+	background: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+.sidebar {
+	flex: 1 1 260px;
+	background: #fff;
+	padding: 18px;
+	border-radius: 8px;
+	height: fit-content;
+	box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+/* Sections */
+section { margin-bottom: 18px; }
+h3, h4 { color: #0b1220; margin-bottom: 8px; }
+.prof_sum_text { color: #333; font-size: 15px; }
+
+.employ_Hist_full_stack_text span { display: block; color: #6b7280; font-size: 13px; margin-top: 4px; }
+.employ_date { color: #6b7280; font-size: 13px; margin-bottom: 8px; }
+.employ_Hist_full_stack_formlist ul { margin-left: 18px; list-style: disc; color: #333; }
+.employ_Hist_full_stack_formlist li { margin-bottom: 6px; font-size: 14px; }
+
+/* Sidebar: skills and languages */
+.Skills_sub, .languages_sub { font-size: 16px; margin-bottom: 10px; }
+.Skills_text label, .languages_text label {
+	display: block;
+	margin-bottom: 14px;
+	font-size: 14px;
+}
+.skill-meta { font-size: 12px; color: #6b7280; margin: 4px 0 8px; }
+
+/* Range input styling */
+input[type=range].range { width: 100%; height: 6px; -webkit-appearance: none; background: transparent; }
+input[type=range].range:focus { outline: none; }
+
+/* WebKit track */
+input[type=range].range::-webkit-slider-runnable-track {
+	height: 8px; border-radius: 999px; background: #e6edf3;
+}
+input[type=range].range::-webkit-slider-thumb {
+	-webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%; background: #0f1724; margin-top: -3px;
+	box-shadow: 0 2px 6px rgba(15,23,36,0.2);
+}
+
+/* Firefox */
+input[type=range].range::-moz-range-track { height: 8px; border-radius: 999px; background: #e6edf3; }
+input[type=range].range::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: #0f1724; }
+
+/* Small screens: stack columns */
+@media (max-width: 900px) {
+	.flex { flex-direction: column; }
+	.sidebar { order: 2; }
+}
+
+/* Typography tweaks */
+.sub { color: #0b1220; }
+.number, .email, .loc { margin-top: 4px; }
+
+/* Improve print: keep two-column feel on paper */
+@media print {
+	body { background: #fff; padding: 0; }
+	.flex { gap: 12px; }
+	.main, .sidebar { box-shadow: none; border: 1px solid #ddd; }
+}
+
